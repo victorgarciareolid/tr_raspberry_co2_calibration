@@ -9,8 +9,8 @@ def signal_handler(signal, frame):
 	w.close()
         sys.exit(0)
 
-f = open(sys.argv[1], 'wt')
-w = csv.writer(f)
+with open(sys.argv[1], 'wt') as f:
+	w = csv.writer(f)
 w.writerow(["CO2", "TEMP"])
 
 adc = ADS1x15(ic=0x00)
