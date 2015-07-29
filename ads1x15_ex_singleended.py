@@ -24,4 +24,4 @@ with open(sys.argv[1], 'wt') as f:
 		if(i == 120):
 			print("Data got!")
 			break
-		time.sleep(1)
+		time.sleep(30)
